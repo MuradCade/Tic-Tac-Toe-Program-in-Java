@@ -1,3 +1,4 @@
+// Tic-Tac-Toe Program in Java   this game Is Between Player And The Cpu/"Computer" i Use Random To Randomise The Positions Of The Cpu But Feel Free To Use AI And Make It Alot Fun Enjoy
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
@@ -9,7 +10,6 @@ static ArrayList<Integer> playerPositions =  new ArrayList<Integer>();
 static ArrayList<Integer> cpuPositions = new ArrayList<Integer>();
 
 
-    
   public static void main(String args[]) { 
  
  char [][] gameboard = {
@@ -23,6 +23,7 @@ static ArrayList<Integer> cpuPositions = new ArrayList<Integer>();
  
 printboard(gameboard);
 Scanner scan = new Scanner (System.in);
+
 while(true){
 System.out.println("Enter Your Placement (1-9): ");
 int pos = scan.nextInt();
@@ -41,7 +42,7 @@ System.out.print(result);
       
       } 
   }
-      
+      //printing the board
       public static void printboard(char [][] gameboard){
           
           for(char [] row : gameboard){
@@ -51,7 +52,7 @@ System.out.print(result);
         System.out.println();
     }
 }
-
+    //checking for positions
 public static void pos(char [] [] gameboard , int pos, String user){
     char symbol = ' ';
     if(user.equals("player")){
@@ -105,6 +106,7 @@ break;
 }
 
 } 
+      //Checking The Winner
 public static String checkwinner(){
 
 List toprow = Arrays.asList(1,2,3);
@@ -148,16 +150,7 @@ else if(playerPositions.size() + cpuPositions.size() ==9){
  }
 return "";
     
-}
-
-
-
-
-
-
-
-    
-    
+}    
 }
     
 
